@@ -1,0 +1,11 @@
+<a href="#/" class="btn btn-primary"> back </a>
+<hr>
+        <ul id="pic" >
+            <li  ng-repeat="pics in photo">
+               <a class="pic-cell" href="#/photo-details/{{$index}}">
+                  <img class="pic-img" src="images/{{pics.image}}">
+                  <span class="pic-overlay"></span>
+                  <span class="pic-text">{{pics.name}}</span>
+               </a>
+            </li>
+       </ul>

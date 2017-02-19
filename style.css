@@ -1,0 +1,135 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+.container {
+  width: auto;
+  max-width: 980px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+
+
+/* css for grid layout 
+---------------------------------------------------*/
+
+
+#pic {
+    max-width:900px;
+    margin:0 auto; /*center aligned*/
+    padding:0;
+    font-size:0;
+    list-style:none;
+    background-color:white;
+}
+#pic li {
+    display: inline-block;
+    width:25%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.pic-cell {
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+img{
+    width:100%
+}
+        
+/* If have the image layer */
+.pic-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#pic li:hover .pic-img {
+    transform:scale(1.10);
+}
+        
+/* If have the overlay layer */
+.pic-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #3DC0F1 no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+}
+#pic li:hover .pic-overlay {
+    opacity:0.8;
+}
+
+/* Caption */
+.pic-text {
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-family: sans-serif;
+    top:40%;
+    color:white;
+    opacity:0;
+    }
+#pic li:hover .pic-text {
+    opacity:0.9;
+}
+
+/* resizing according to the screen */
+
+
+@media (max-width: 9000px) {
+    #pic li {
+        width:25%;
+    }
+}
+
+@media (max-width: 700px) {
+    #pic li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #pic li {
+        width:50%;
+    }
+}
